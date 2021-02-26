@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.align-head {
+  background: #fff;
+}
+
+.wrappers {
+  position: relative;
+  top: 110px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 0 auto;
+
+  padding: 20% 20px 170px;
+
+  width: 300px;
+  height: 250px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.wrappers .title {
+  font-size: 25px;
+  margin-top: 70px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 100px;
+  color: #035aa6;
+  user-select: none;
+  border-radius: 15px 15px 0 0;
+}
+
+.wrappers form {
+  padding: 30px 7px 30px 40px;
+}
+.wrappers form .field {
+  height: 34px;
+  width: 110%;
+  margin-left: -20px;
+  position: relative;
+}
+
+.wrappers form .field input:focus,
+form .field input:valid {
+  border-color: #4158d0;
+}
+
+.field-input {
+  height: 34px;
+  width: 110%;
+  position: relative;
+}
+
+.label-email {
+  position: relative;
+  top: -10px;
+}
+
+.signup-links {
+  text-align: center;
+}
+
+form .signup-link {
+  color: black;
+  /* background: #4158d0; */
+  margin-top: 30px;
+  text-align: center;
+  font-size: 14.9px;
+  margin-left: 40px;
+}
+.register {
+  color: #4158d0;
+  font-weight: bold;
+}
+form .pass-link a,
+form .signup-link a .field {
+  color: #4158d0;
+}
+form .pass-link a:hover,
+form .signup-link a:hover .field {
+  /* text-decoration: underline; */
+}
+
+.wrapper form .field {
+  /* height: 34px;
+  width: 120%;
+  margin-left: -20px;
+  position: relative; */
+}
