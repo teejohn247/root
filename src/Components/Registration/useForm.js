@@ -1,7 +1,11 @@
 import { useState, useEffect } from "react";
+import {useHistory} from 'react-router-dom';
+
 
 
 const useForm = (callback, validate) => {
+  const history = useHistory()
+
   const [values, setValues] = useState({
     organisationname: "",
     username: "",
@@ -24,6 +28,7 @@ const useForm = (callback, validate) => {
     e.preventDefault();
     setErrors(validate(values));
     setIsSubmitting(true);
+    history.push('/login');
   };
   useEffect(() => {
     if (Object.keys(errors).length === 0 && isSubmitting) {
