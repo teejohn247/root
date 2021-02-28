@@ -1,15 +1,17 @@
 import React from 'react';
-import {NavLink, withRouter} from 'react-router-dom'
+import {NavLink, withRouter, useHistory} from 'react-router-dom';
 import {ReactComponent as Logo} from '../../assets/instagram.svg';
 // import {ReactComponent as canary} from '../../assets/canary.png';
 import {ReactComponent as Home} from '../../assets/home.svg';
 import {ReactComponent as Explore} from '../../assets/explore.svg';
 import './header.css';
-const Header = ({history, isLogged}) =>{
+const Header = () =>{
+    const history = useHistory()
     const handleClick=() =>{
-        history.push('/')
-        isLogged(false)
+          localStorage.clear();
+          history.push("/login");
     }
+    
     return(  
         <nav>
             <div className='div-header'>

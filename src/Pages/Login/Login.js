@@ -16,10 +16,12 @@ import './login.css';
     const [email, setEmail] = useState("");
     const [password, setPassword] =useState("");
     console.log("bb", props)
+    const history = useHistory()
 
   const handleSubmit = (e) =>{
         e.preventDefault()
-       props.isLogin(true);
+        localStorage.setItem("token", '123h');
+        history.push("/home");
     }
 
 
@@ -65,7 +67,7 @@ import './login.css';
                 </div>
                  </Link>
                  <br />
-                 <Link  to="/Signup">
+                 <Link to="/Signup">
                     <div className="signup-link">
                     Don't have an account? <a className="register" href=" #">Register here</a></div>
                     </Link>

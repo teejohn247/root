@@ -5,16 +5,12 @@ import NewHome from '../NewHome/NewHome';
 import Explore from '../Explore/Explore'
 import Profile from '../Profile/Profile';
 // import ForgotPwd from '../ForgotPwd/ForgotPwd'
-const Home = ({isLogin}) => {
+const Home = () => {
     return(   
         <div>
-            <Header isLogged={isLogin}/>
-            <Switch>
-                <Route exact path='/' component={NewHome}/>
-                <Route exact path='/explore' component={Explore}/>
-                {/* <Route path="/forgotpwd" component={ForgotPwd} /> */}
-                <Route path='/:username' component={Profile}/>
-            </Switch>
+            <Header />
+            <NewHome />
+            <Explore />
         </div>
     )   
 }
